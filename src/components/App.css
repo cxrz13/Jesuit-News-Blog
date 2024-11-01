@@ -1,23 +1,185 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Zilla Slab", serif;
+  font-weight: 300;
 }
 
-.App {
+.Blog {
   display: grid;
-  grid-template-rows: min-content auto;
-  grid-template-columns: 250px auto;
+  grid-template-rows: 30px 150px auto;
+  grid-template-columns:1fr 3fr 1fr;
   height: 100vh;
   overflow: scroll;
+  background-color: #F7EBE8;
 }
 
-header {
+.blogPosts{
   display: flex;
-  justify-content: space-between;
-  background-color: black;
-  color: white;
+  background-color: #F7EBE8;
+  grid-row: 3 / span 1;
+  grid-column: 2 / span 1;
+  overflow: scroll;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+  padding-top: 50px;
+
+}
+
+.post{
+  display: grid;
+  grid-template-rows:1fr 4fr 1fr;
+  grid-template-columns:1fr 6fr;
+  width: 500px;
+  height: 350px;
+  background-color: #E54B4B;
+  box-shadow: 4px 5px 5px grey;
+  border-radius: 10px;
+}
+.article-entry{
+  grid-row: 3 / span 1;
+  grid-column: 2 / span 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding-top: 50px;
+
+}
+form{
+  width: 500px;
+  height: 350px;
+  background-color: #E54B4B;
+  box-shadow: 4px 5px 5px grey;
+  border-radius: 10px;
+
+}
+
+input, textarea {
+  background-color: #F7EBE8;
+}
+
+.new-article-button{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 130px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #F7EBE8;
+}
+.new-article-img{
+  width: 40px;
+  height: 40px;
+  padding-right: 7px;
+}
+h4{
   grid-column: 1 / span 2;
-  padding: 10px 5px;
+  grid-row: 1 / span 1;
+  padding-left: 20px;
+  font-size: 25px;
+  color: #1E1E24;
+}
+
+.date{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  grid-column: 2 / span 1;
+  grid-row: 3;
+  padding-right: 25px;
+}
+
+.body{
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+}
+
+header{
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 3;
+}
+
+.title{
+  display: flex;
+  background-image: linear-gradient(-90deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("../src/assests/jes-res-spain-3.jpg");
+  justify-content: space-between;
+  align-items: center;
+}
+
+img{
+  width: 300px;
+  height: 150px;
+}
+
+h3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 150px;
+  font-size: 50px;
+  font-weight: 500;
+  color: black;
+  text-shadow: 3px 3px 3px gray;
+}
+
+.auth{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-row: 2 / span 1;
+  grid-column: 3 / span 1;
+  padding-left: 73px;
+}
+
+h6{
+  font-size: 16px;
+  font-weight: 500;
+  margin:8px;
+}
+nav{
+  grid-row: 3 / span 1;
+  grid-column: 3 / span 1;
+}
+
+.new-article{
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+  color:#1E1E24;
+  background-color: #F7EBE8;
+  width: 175px;
+  height: 75px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 50px;
+  margin-top: 15px;
+}
+
+.plus{
+  width:55px;
+  height:45px;
+  padding-right: 7px;
+}
+
+h5{
+  font-size: 15px;
+}
+
+.sign-out-logo{
+  width: 20px;
+  height: 20px;
+}
+
+.sign-out{
+  display: flex;
+  align-items: center;
+  background-color: #F7EBE8;
+  width: 115px;
+  height: 35px;
+  border-radius: 15px;
+
 }
 
 form {
@@ -31,6 +193,7 @@ form input,
 form textarea {
   margin-bottom: 10px;
   width: 300px;
+
 }
 
 nav,
@@ -40,7 +203,7 @@ article {
 }
 
 nav {
-  background-color: #dee9ff;
+  background-color: #297373;
 }
 
 nav p:hover {
@@ -61,3 +224,36 @@ article .body {
   color: gold;
   padding: 5px;
 }
+
+.NewsArticles {
+  display: grid;
+  grid-template-rows:1 fr 1fr ;
+  grid-template-columns:1fr 1fr ;
+  gap: 15px;
+  height: 100vh;
+  overflow: scroll;
+
+}
+
+.News{
+  grid-row: 3 / span 1;
+  grid-column: 2/ span 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow: scroll;
+  background-color: #F7EBE8;
+}
+
+.Article{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  background-color: #E54B4B;
+  border-radius: 5px;
+
+}
+

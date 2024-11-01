@@ -1,4 +1,4 @@
-export default function Nav({ articles, setArticle }) {
+export default function Nav({ user, isWriting, articles, setArticle }) {
   return (
     <nav>
       {!articles

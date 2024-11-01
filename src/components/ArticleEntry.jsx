@@ -16,7 +16,7 @@ export default function ArticleEntry({ addArticle }) {
   }
 
   return (
-    <div>
+    <div className="article-entry">
       <form onSubmit={submit}>
         {error && <p className="error">{error}</p>}
         Title
@@ -27,7 +27,7 @@ export default function ArticleEntry({ addArticle }) {
           value={body}
           onChange={(e) => setBody(e.target.value)}
         ></textarea>
-        <button type="submit">Create</button>
+        <button className="new-article-button" type="submit"> <img className="new-article-img" src="../public/create-article.svg" /><h5>Create</h5></button>
       </form>
     </div>
   )

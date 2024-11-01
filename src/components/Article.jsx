@@ -1,15 +1,10 @@
-export default function Article({ article }) {
+import BlogPost from "./BlogPost"
+export default function Article({ articles }) {
   return (
-    <article>
-      {!article ? (
-        <p>No article selected</p>
-      ) : (
-        <section>
-          <h2>{article.title}</h2>
-          <p className="date">{`Posted: ${article.date}`}</p>
-          <p className="body">{article.body}</p>
-        </section>
-      )}
-    </article>
+    <div className="blogPosts">
+      {articles.map((article) =>(
+        <BlogPost post={article} />
+      ))}
+    </div>
   )
 }
